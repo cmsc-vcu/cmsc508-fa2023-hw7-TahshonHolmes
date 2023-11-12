@@ -1,6 +1,6 @@
 ---
 title: Homework 7 - Creating a resume database
-author: (your name goes here!)
+author: Tahshon
 date: last-modified
 format:
     html:
@@ -10,11 +10,10 @@ format:
         code-copy: true
 ---
 
-(include a brief description of what is in this document)
+(This document is outlining how to create a resume DB using python and SQL. Some snippets on how to implement to database connection, test it, and some queries. Also a crows-foot diagram illustrating relationships and sections with examples of data in the DB. )
 
-(Please clean up any comments that I included.  This is a scaffold document.)
 
-GITHUB URL:  <your URL goes here!>
+GITHUB URL:  <https://github.com/cmsc-vcu/cmsc508-fa2023-hw7-TahshonHolmes>
 
 ```{python}
 #| eval: true
@@ -92,7 +91,7 @@ except Exception as e:
 
 ## Overview and description
 
-(briefly describe the project and the database)
+(The project is creating a company wide resume database to capture the skills, certs, and roles of individuals in a company. There are 4 main tables: skills, people, roles, and peopleskills. )
 
 ## Crows-foot diagram
 
@@ -200,13 +199,81 @@ df
 
 
 ### List people names and email addresses ordered by last_name
+```{python}
+sql = """
+SELECT first_name, last_name, email
+FROM people
+ORDER BY last_name;
+"""
+```
+
+(and here is a sample result from the query)
+
+```{python}
+#| echo: false
+#| eval: true
+try:
+    df = pd.read_sql(sql, cnx)
+    df
+except Exception as e:
+    message = str(e)
+    print(f"An error occurred:\n\n{message}\n\nIgnoring and moving on.")
+    df = pd.DataFrame()
+df
+```
 
 
 ### List skill names of Person 1
+```{python}
+sql = """
+SELECT s.name
+FROM skills s
+JOIN peopleskills ps ON s.id = ps.skills_id
+JOIN people p ON ps.people_id = p.id
+WHERE p.first_name = 'Person 1';
+"""
+```
 
+(and here is a sample result from the query)
+
+```{python}
+#| echo: false
+#| eval: true
+try:
+    df = pd.read_sql(sql, cnx)
+    df
+except Exception as e:
+    message = str(e)
+    print(f"An error occurred:\n\n{message}\n\nIgnoring and moving on.")
+    df = pd.DataFrame()
+df
+```
 
 ### List people names with Skill 6
+```{python}
+sql = """
+SELECT p.first_name, p.last_name
+FROM people p
+JOIN peopleskills ps ON p.id = ps.people_id
+JOIN skills s ON ps.skills_id = s.id
+WHERE s.id = 6;
+"""
+```
 
+(and here is a sample result from the query)
+
+```{python}
+#| echo: false
+#| eval: true
+try:
+    df = pd.read_sql(sql, cnx)
+    df
+except Exception as e:
+    message = str(e)
+    print(f"An error occurred:\n\n{message}\n\nIgnoring and moving on.")
+    df = pd.DataFrame()
+df
+```
 
 ### List people with a DEVELOPER role
 
