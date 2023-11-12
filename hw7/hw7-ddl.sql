@@ -88,9 +88,11 @@ VALUES
     (3, 'Michael', 'Person 3', 'michael.person3@example.com', 'https://www.linkedin.com/in/michaelperson3', 'headshot3.jpg', 'michael.person3#9101', 'Aspiring developer eager to learn and grow.', '2023-11-03'),
     (4, 'Emily', 'Person 4', 'emily.person4@example.com', 'https://www.linkedin.com/in/emilyperson4', 'headshot4.jpg', 'emily.person4#1121', 'Passionate designer with a unique perspective.', '2023-11-04'),
     (5, 'Daniel', 'Person 5', 'daniel.person5@example.com', 'https://www.linkedin.com/in/danielperson5', 'headshot5.jpg', 'daniel.person5#3141', 'Enthusiastic developer with a focus on innovation.', '2023-11-05'),
-    (6, 'Olivia', 'Person 6', 'olivia.person6@example.com', 'https://www.linkedin.com/in/oliviaperson6', 'headshot6.jpg', 'olivia.person6#5161', 'Detail-oriented designer with a flair for creativity.', '2023-11-06');
-
-
+    (6, 'Olivia', 'Person 6', 'olivia.person6@example.com', 'https://www.linkedin.com/in/oliviaperson6', 'headshot6.jpg', 'olivia.person6#5161', 'Detail-oriented designer with a flair for creativity.', '2023-11-06'),
+    (7, 'Robert', 'Person 7', 'robert.person7@example.com', 'https://www.linkedin.com/in/robertperson7', 'headshot7.jpg', 'robert.person7#7181', 'Innovative developer with a keen interest in new technologies.', '2023-11-07'),
+    (8, 'Samantha', 'Person 8', 'samantha.person8@example.com', 'https://www.linkedin.com/in/samanthaperson8', 'headshot8.jpg', 'samantha.person8#9201', 'Versatile designer with a passion for user experience.', '2023-11-08'),
+    (9, 'William', 'Person 9', 'william.person9@example.com', 'https://www.linkedin.com/in/williamperson9', 'headshot9.jpg', 'william.person9#1221', 'Dedicated developer committed to delivering high-quality code.', '2023-11-09'),
+    (10, 'Sophia', 'Person 10', 'sophia.person10@example.com', 'https://www.linkedin.com/in/sophiaperson10', 'headshot10.jpg', 'sophia.person10#3341', 'Creative designer with a focus on modern and elegant designs.', '2023-11-10');
 
 # Section 6
 # Create peopleskills( id, skills_id, people_id, date_acquired )
@@ -100,7 +102,7 @@ CREATE TABLE peopleskills (
     skills_id INT NOT NULL,
     people_id INT NOT NULL,
     date_acquired DATE NOT NULL,
-    PRIMARY KEY (id),
+    PRIMARY KEY (id)
 );
 
 # Section 7
@@ -163,7 +165,7 @@ CREATE TABLE people_roles (
     people_id INT NOT NULL,
     role_id INT NOT NULL,
     date_role_acquired DATE NOT NULL,
-    PRIMARY KEY (id),
+    PRIMARY KEY (id)
 );
 
 
