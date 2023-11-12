@@ -101,8 +101,6 @@ CREATE TABLE peopleskills (
     people_id INT NOT NULL,
     date_acquired DATE NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (skills_id) REFERENCES skills(skills_id),
-    FOREIGN KEY (people_id) REFERENCES people(people_id)
 );
 
 # Section 7
@@ -166,8 +164,6 @@ CREATE TABLE people_roles (
     role_id INT NOT NULL,
     date_role_acquired DATE NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (people_id) REFERENCES people(people_id),
-    FOREIGN KEY (role_id) REFERENCES roles(role_id)
 );
 
 
