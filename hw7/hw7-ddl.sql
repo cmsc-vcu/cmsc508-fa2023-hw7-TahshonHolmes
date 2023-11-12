@@ -81,24 +81,15 @@ CREATE TABLE people (
 # Their last names must exactly be “Person 1”, “Person 2”, etc.
 # Other fields are for you to assign.
 
-insert into people (people_id,people_last_name) values (1,'Person 1');
 INSERT INTO people (people_id, first_name, last_name, email, linkedin_url, headshot_url, discord_handle, brief_bio, date_joined)
-VALUES (1, 'John', 'Doe', 'john.doe@example.com', 'https://www.linkedin.com/in/johndoe', 'headshot1.jpg', 'john.doe#1234', 'Experienced developer with a passion for coding.', '2023-11-01');
+VALUES
+    (1, 'John', 'Doe', 'john.doe@example.com', 'https://www.linkedin.com/in/johndoe', 'headshot1.jpg', 'john.doe#1234', 'Experienced developer with a passion for coding.', '2023-11-01'),
+    (2, 'Jane', 'Smith', 'jane.smith@example.com', 'https://www.linkedin.com/in/janesmith', 'headshot2.jpg', 'jane.smith#5678', 'Creative designer with an eye for detail.', '2023-11-02'),
+    (3, 'Michael', 'Johnson', 'michael.johnson@example.com', 'https://www.linkedin.com/in/michaeljohnson', 'headshot3.jpg', 'michael.johnson#9101', 'Aspiring developer eager to learn and grow.', '2023-11-03'),
+    (4, 'Emily', 'Williams', 'emily.williams@example.com', 'https://www.linkedin.com/in/emilywilliams', 'headshot4.jpg', 'emily.williams#1121', 'Passionate designer with a unique perspective.', '2023-11-04'),
+    (5, 'Daniel', 'Brown', 'daniel.brown@example.com', 'https://www.linkedin.com/in/danielbrown', 'headshot5.jpg', 'daniel.brown#3141', 'Enthusiastic developer with a focus on innovation.', '2023-11-05'),
+    (6, 'Olivia', 'Jones', 'olivia.jones@example.com', 'https://www.linkedin.com/in/oliviajones', 'headshot6.jpg', 'olivia.jones#5161', 'Detail-oriented designer with a flair for creativity.', '2023-11-06');
 
-INSERT INTO people (people_id, first_name, last_name, email, linkedin_url, headshot_url, discord_handle, brief_bio, date_joined)
-VALUES (2, 'Jane', 'Smith', 'jane.smith@example.com', 'https://www.linkedin.com/in/janesmith', 'headshot2.jpg', 'jane.smith#5678', 'Creative designer with an eye for detail.', '2023-11-02');
-
-INSERT INTO people (people_id, first_name, last_name, email, linkedin_url, headshot_url, discord_handle, brief_bio, date_joined)
-VALUES (3, 'Michael', 'Johnson', 'michael.johnson@example.com', 'https://www.linkedin.com/in/michaeljohnson', 'headshot3.jpg', 'michael.johnson#9101', 'Aspiring developer eager to learn and grow.', '2023-11-03');
-
-INSERT INTO people (people_id, first_name, last_name, email, linkedin_url, headshot_url, discord_handle, brief_bio, date_joined)
-VALUES (4, 'Emily', 'Williams', 'emily.williams@example.com', 'https://www.linkedin.com/in/emilywilliams', 'headshot4.jpg', 'emily.williams#1121', 'Passionate designer with a unique perspective.', '2023-11-04');
-
-INSERT INTO people (people_id, first_name, last_name, email, linkedin_url, headshot_url, discord_handle, brief_bio, date_joined)
-VALUES (5, 'Daniel', 'Brown', 'daniel.brown@example.com', 'https://www.linkedin.com/in/danielbrown', 'headshot5.jpg', 'daniel.brown#3141', 'Enthusiastic developer with a focus on innovation.', '2023-11-05');
-
-INSERT INTO people (people_id, first_name, last_name, email, linkedin_url, headshot_url, discord_handle, brief_bio, date_joined)
-VALUES (6, 'Olivia', 'Jones', 'olivia.jones@example.com', 'https://www.linkedin.com/in/oliviajones', 'headshot6.jpg', 'olivia.jones#5161', 'Detail-oriented designer with a flair for creativity.', '2023-11-06');
 
 
 # Section 6
@@ -128,33 +119,17 @@ CREATE TABLE peopleskills (
 # Person 10 has skills 1,4,5;
 # Note that no one has yet acquired skills 7 and 8.
  
-INSERT INTO peopleskills (skills_id, people_id, date_acquired) VALUES
-    (1, 1, '2023-02-01'), (3, 1, '2023-02-01'), (6, 1, '2023-02-01');
-
-INSERT INTO peopleskills (skills_id, people_id, date_acquired) VALUES
-    (3, 2, '2023-03-01'), (4, 2, '2023-03-01'), (5, 2, '2023-03-01');
-
-INSERT INTO peopleskills (skills_id, people_id, date_acquired) VALUES
-    (1, 3, '2023-04-01'), (5, 3, '2023-04-01');
-
-INSERT INTO peopleskills (skills_id, people_id, date_acquired) VALUES
-    (3, 5, '2023-06-01'), (6, 5, '2023-06-01');
-
-INSERT INTO peopleskills (skills_id, people_id, date_acquired) VALUES
-    (2, 6, '2023-07-01'), (3, 6, '2023-07-01'), (4, 6, '2023-07-01');
-
-INSERT INTO peopleskills (skills_id, people_id, date_acquired) VALUES
-    (3, 7, '2023-08-01'), (5, 7, '2023-08-01'), (6, 7, '2023-08-01');
-
-INSERT INTO peopleskills (skills_id, people_id, date_acquired) VALUES
-    (1, 8, '2023-09-01'), (3, 8, '2023-09-01'), (5, 8, '2023-09-01'), (6, 8, '2023-09-01');
-
-INSERT INTO peopleskills (skills_id, people_id, date_acquired) VALUES
-    (2, 9, '2023-10-01'), (5, 9, '2023-10-01'), (6, 9, '2023-10-01');
-
-INSERT INTO peopleskills (skills_id, people_id, date_acquired) VALUES
+INSERT INTO peopleskills (skills_id, people_id, date_acquired)
+VALUES
+    (1, 1, '2023-02-01'), (3, 1, '2023-02-01'), (6, 1, '2023-02-01'),
+    (3, 2, '2023-03-01'), (4, 2, '2023-03-01'), (5, 2, '2023-03-01'),
+    (1, 3, '2023-04-01'), (5, 3, '2023-04-01'),
+    (3, 5, '2023-06-01'), (6, 5, '2023-06-01'),
+    (2, 6, '2023-07-01'), (3, 6, '2023-07-01'), (4, 6, '2023-07-01'),
+    (3, 7, '2023-08-01'), (5, 7, '2023-08-01'), (6, 7, '2023-08-01'),
+    (1, 8, '2023-09-01'), (3, 8, '2023-09-01'), (5, 8, '2023-09-01'), (6, 8, '2023-09-01'),
+    (2, 9, '2023-10-01'), (5, 9, '2023-10-01'), (6, 9, '2023-10-01'),
     (1, 10, '2023-11-01'), (4, 10, '2023-11-01'), (5, 10, '2023-11-01');
-
 
 # Section 8
 # Create roles( id, name, sort_priority )
@@ -211,31 +186,14 @@ CREATE TABLE people_roles (
 # Person 10 is Developer and Designer
 
 INSERT INTO people_roles (people_id, role_id, date_role_acquired)
-VALUES (1, 1, '2023-11-01');
-
-INSERT INTO people_roles (people_id, role_id, date_role_acquired)
-VALUES (2, 5, '2023-11-02'), (2, 6, '2023-11-02');
-
-INSERT INTO people_roles (people_id, role_id, date_role_acquired)
-VALUES (3, 1, '2023-11-03'), (3, 4, '2023-11-03');
-
-INSERT INTO people_roles (people_id, role_id, date_role_acquired)
-VALUES (4, 3, '2023-11-04');
-
-INSERT INTO people_roles (people_id, role_id, date_role_acquired)
-VALUES (5, 3, '2023-11-05');
-
-INSERT INTO people_roles (people_id, role_id, date_role_acquired)
-VALUES (6, 1, '2023-11-06'), (6, 2, '2023-11-06');
-
-INSERT INTO people_roles (people_id, role_id, date_role_acquired)
-VALUES (7, 2, '2023-11-07');
-
-INSERT INTO people_roles (people_id, role_id, date_role_acquired)
-VALUES (8, 2, '2023-11-08'), (8, 4, '2023-11-08');
-
-INSERT INTO people_roles (people_id, role_id, date_role_acquired)
-VALUES (9, 1, '2023-11-09');
-
-INSERT INTO people_roles (people_id, role_id, date_role_acquired)
-VALUES (10, 1, '2023-11-10'), (10, 2, '2023-11-10');
+VALUES
+    (1, 1, '2023-11-01'),
+    (2, 5, '2023-11-02'), (2, 6, '2023-11-02'),
+    (3, 1, '2023-11-03'), (3, 4, '2023-11-03'),
+    (4, 3, '2023-11-04'),
+    (5, 3, '2023-11-05'),
+    (6, 1, '2023-11-06'), (6, 2, '2023-11-06'),
+    (7, 2, '2023-11-07'),
+    (8, 2, '2023-11-08'), (8, 4, '2023-11-08'),
+    (9, 1, '2023-11-09'),
+    (10, 1, '2023-11-10'), (10, 2, '2023-11-10');
