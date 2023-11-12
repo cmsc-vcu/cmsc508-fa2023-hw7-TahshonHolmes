@@ -83,12 +83,12 @@ CREATE TABLE people (
 
 INSERT INTO people (people_id, first_name, last_name, email, linkedin_url, headshot_url, discord_handle, brief_bio, date_joined)
 VALUES
-    (1, 'John', 'Doe', 'john.doe@example.com', 'https://www.linkedin.com/in/johndoe', 'headshot1.jpg', 'john.doe#1234', 'Experienced developer with a passion for coding.', '2023-11-01'),
-    (2, 'Jane', 'Smith', 'jane.smith@example.com', 'https://www.linkedin.com/in/janesmith', 'headshot2.jpg', 'jane.smith#5678', 'Creative designer with an eye for detail.', '2023-11-02'),
-    (3, 'Michael', 'Johnson', 'michael.johnson@example.com', 'https://www.linkedin.com/in/michaeljohnson', 'headshot3.jpg', 'michael.johnson#9101', 'Aspiring developer eager to learn and grow.', '2023-11-03'),
-    (4, 'Emily', 'Williams', 'emily.williams@example.com', 'https://www.linkedin.com/in/emilywilliams', 'headshot4.jpg', 'emily.williams#1121', 'Passionate designer with a unique perspective.', '2023-11-04'),
-    (5, 'Daniel', 'Brown', 'daniel.brown@example.com', 'https://www.linkedin.com/in/danielbrown', 'headshot5.jpg', 'daniel.brown#3141', 'Enthusiastic developer with a focus on innovation.', '2023-11-05'),
-    (6, 'Olivia', 'Jones', 'olivia.jones@example.com', 'https://www.linkedin.com/in/oliviajones', 'headshot6.jpg', 'olivia.jones#5161', 'Detail-oriented designer with a flair for creativity.', '2023-11-06');
+    (1, 'Person', '1', 'john.doe@example.com', 'https://www.linkedin.com/in/johndoe', 'headshot1.jpg', 'john.doe#1234', 'Experienced developer with a passion for coding.', '2023-11-01'),
+    (2, 'Person', '2', 'jane.smith@example.com', 'https://www.linkedin.com/in/janesmith', 'headshot2.jpg', 'jane.smith#5678', 'Creative designer with an eye for detail.', '2023-11-02'),
+    (3, 'Person', '3', 'michael.johnson@example.com', 'https://www.linkedin.com/in/michaeljohnson', 'headshot3.jpg', 'michael.johnson#9101', 'Aspiring developer eager to learn and grow.', '2023-11-03'),
+    (4, 'Person', '4', 'emily.williams@example.com', 'https://www.linkedin.com/in/emilywilliams', 'headshot4.jpg', 'emily.williams#1121', 'Passionate designer with a unique perspective.', '2023-11-04'),
+    (5, 'Person', '5', 'daniel.brown@example.com', 'https://www.linkedin.com/in/danielbrown', 'headshot5.jpg', 'daniel.brown#3141', 'Enthusiastic developer with a focus on innovation.', '2023-11-05'),
+    (6, 'Person', '6', 'olivia.jones@example.com', 'https://www.linkedin.com/in/oliviajones', 'headshot6.jpg', 'olivia.jones#5161', 'Detail-oriented designer with a flair for creativity.', '2023-11-06');
 
 
 
@@ -101,8 +101,8 @@ CREATE TABLE peopleskills (
     people_id INT NOT NULL,
     date_acquired DATE NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (skills_id) REFERENCES skills(id),
-    FOREIGN KEY (people_id) REFERENCES people(id)
+    FOREIGN KEY (skills_id) REFERENCES skills(skills_id),
+    FOREIGN KEY (people_id) REFERENCES people(people_id)
 );
 
 # Section 7
@@ -166,8 +166,8 @@ CREATE TABLE people_roles (
     role_id INT NOT NULL,
     date_role_acquired DATE NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (people_id) REFERENCES people(id),
-    FOREIGN KEY (role_id) REFERENCES roles(id)
+    FOREIGN KEY (people_id) REFERENCES people(people_id),
+    FOREIGN KEY (role_id) REFERENCES roles(role_id)
 );
 
 
