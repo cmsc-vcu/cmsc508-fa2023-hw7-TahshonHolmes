@@ -185,13 +185,13 @@ CREATE TABLE people_roles (
 
 INSERT INTO people_roles (people_id, role_id, date_role_acquired)
 VALUES
-    (1, 1, '2023-11-01'),
-    (2, 5, '2023-11-02'), (2, 6, '2023-11-02'),
-    (3, 1, '2023-11-03'), (3, 4, '2023-11-03'),
-    (4, 3, '2023-11-04'),
-    (5, 3, '2023-11-05'),
-    (6, 1, '2023-11-06'), (6, 2, '2023-11-06'),
-    (7, 2, '2023-11-07'),
-    (8, 2, '2023-11-08'), (8, 4, '2023-11-08'),
-    (9, 1, '2023-11-09'),
-    (10, 1, '2023-11-10'), (10, 2, '2023-11-10');
+    (1, 1, '2023-11-01'), -- Person 1 is Developer
+    (2, 5, '2023-11-02'), (2, 6, '2023-11-02'), -- Person 2 is Boss, Mentor
+    (3, 1, '2023-11-03'), (3, 4, '2023-11-03'), -- Person 3 is Developer and Team Lead
+    (4, 3, '2023-11-04'), -- Person 4 is Recruit
+    (5, 3, '2023-11-05'), -- person 5 is Recruit
+    (6, 1, '2023-11-06'), (6, 2, '2023-11-06'), -- Person 6 is Developer and Designer
+    (7, 2, '2023-11-07'), -- Person 7 is Designer
+    (8, 2, '2023-11-08'), (8, 4, '2023-11-08'), -- Person 8 is Designer and Team Lead
+    (9, 1, '2023-11-09'), -- Person 9 is Developer
+    (10, 1, '2023-11-10'), (10, 2, '2023-11-10'); -- Person 10 is Developer and Designer
