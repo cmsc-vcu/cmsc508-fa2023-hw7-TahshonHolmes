@@ -19,7 +19,7 @@
 SET FOREIGN_KEY_CHECKS=0;
 DROP TABLE IF EXISTS people;
 DROP TABLE IF EXISTS peopleskills;
-DROP TABLE IF EXISTS people_roles;
+DROP TABLE IF EXISTS peopleroles;
 DROP TABLE IF EXISTS skills;
 DROP TABLE IF EXISTS people;
 DROP TABLE IF EXISTS roles;
@@ -160,7 +160,7 @@ INSERT INTO roles (id, name, sort_priority) VALUES
 # Section 10
 # Create peopleroles( id, people_id, role_id, date_assigned )
 # None of the fields can be null.  ID can be auto_increment
-CREATE TABLE people_roles (
+CREATE TABLE peopleroles (
     id INT AUTO_INCREMENT,
     people_id INT NOT NULL,
     role_id INT NOT NULL,
@@ -183,7 +183,7 @@ CREATE TABLE people_roles (
 # Person 9 is Developer
 # Person 10 is Developer and Designer
 
-INSERT INTO people_roles (people_id, role_id, date_role_acquired)
+INSERT INTO peopleroles (people_id, role_id, date_role_acquired)
 VALUES
     (1, 1, '2023-11-01'), -- Person 1 is Developer
     (2, 5, '2023-11-02'), (2, 6, '2023-11-02'), -- Person 2 is Boss, Mentor
