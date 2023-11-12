@@ -98,18 +98,52 @@ except Exception as e:
 (add a description of the diagram and what the reader is seeing.)
 
 ```{mermaid}
-%%| echo: false
 erDiagram
-    CUSTOMER ||--o{ ORDER : places
-    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
-    CUSTOMER{
-        int id
-        string first_name
-        string last_name
-    }
-    DELIVERY-ADDRESS {
-        int id
-    }
+    people ||--o{ peopleskills : possesses
+    skills }|..|{ peopleskills : describes
+    people ||--o{ people_roles : plays
+    roles }|..|{ people_roles : assigned
+
+skills{
+  int id 
+  string name 
+  string description
+  string tag 
+  string url 
+  int time_commitment
+}
+
+people {
+  int id 
+  string first_name
+  string last_name
+  string email
+  string linkedin_url
+  string headshot_url
+  string discord_handle
+  string brief_bio
+  date date_joined
+}
+
+peopleskills{
+    int id 
+    int skills_id 
+    int people_id 
+    date date_acquired
+}
+
+roles{
+    int id 
+    string name 
+    int sort_priortity
+}
+
+people_roles{
+    int id 
+    int people_id 
+    int role_id 
+    date date_role_acquired
+}
 ```
 
 ## Examples of data in the database
