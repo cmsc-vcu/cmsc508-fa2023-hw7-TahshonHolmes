@@ -83,12 +83,12 @@ CREATE TABLE people (
 
 INSERT INTO people (people_id, first_name, last_name, email, linkedin_url, headshot_url, discord_handle, brief_bio, date_joined)
 VALUES
-    (1, 'Person', '1', 'john.doe@example.com', 'https://www.linkedin.com/in/johndoe', 'headshot1.jpg', 'john.doe#1234', 'Experienced developer with a passion for coding.', '2023-11-01'),
-    (2, 'Person', '2', 'jane.smith@example.com', 'https://www.linkedin.com/in/janesmith', 'headshot2.jpg', 'jane.smith#5678', 'Creative designer with an eye for detail.', '2023-11-02'),
-    (3, 'Person', '3', 'michael.johnson@example.com', 'https://www.linkedin.com/in/michaeljohnson', 'headshot3.jpg', 'michael.johnson#9101', 'Aspiring developer eager to learn and grow.', '2023-11-03'),
-    (4, 'Person', '4', 'emily.williams@example.com', 'https://www.linkedin.com/in/emilywilliams', 'headshot4.jpg', 'emily.williams#1121', 'Passionate designer with a unique perspective.', '2023-11-04'),
-    (5, 'Person', '5', 'daniel.brown@example.com', 'https://www.linkedin.com/in/danielbrown', 'headshot5.jpg', 'daniel.brown#3141', 'Enthusiastic developer with a focus on innovation.', '2023-11-05'),
-    (6, 'Person', '6', 'olivia.jones@example.com', 'https://www.linkedin.com/in/oliviajones', 'headshot6.jpg', 'olivia.jones#5161', 'Detail-oriented designer with a flair for creativity.', '2023-11-06');
+    (1, 'John', 'Person 1', 'john.person1@example.com', 'https://www.linkedin.com/in/johnperson1', 'headshot1.jpg', 'john.person1#1234', 'Experienced developer with a passion for coding.', '2023-11-01'),
+    (2, 'Jane', 'Person 2', 'jane.person2@example.com', 'https://www.linkedin.com/in/janeperson2', 'headshot2.jpg', 'jane.person2#5678', 'Creative designer with an eye for detail.', '2023-11-02'),
+    (3, 'Michael', 'Person 3', 'michael.person3@example.com', 'https://www.linkedin.com/in/michaelperson3', 'headshot3.jpg', 'michael.person3#9101', 'Aspiring developer eager to learn and grow.', '2023-11-03'),
+    (4, 'Emily', 'Person 4', 'emily.person4@example.com', 'https://www.linkedin.com/in/emilyperson4', 'headshot4.jpg', 'emily.person4#1121', 'Passionate designer with a unique perspective.', '2023-11-04'),
+    (5, 'Daniel', 'Person 5', 'daniel.person5@example.com', 'https://www.linkedin.com/in/danielperson5', 'headshot5.jpg', 'daniel.person5#3141', 'Enthusiastic developer with a focus on innovation.', '2023-11-05'),
+    (6, 'Olivia', 'Person 6', 'olivia.person6@example.com', 'https://www.linkedin.com/in/oliviaperson6', 'headshot6.jpg', 'olivia.person6#5161', 'Detail-oriented designer with a flair for creativity.', '2023-11-06');
 
 
 
